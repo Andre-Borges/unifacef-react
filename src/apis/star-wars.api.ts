@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'https://star-wars-api-facefx.herokuapp.com'; // trocar por env de ambiente
+const baseURL = process.env.REACT_APP_STAR_WARS_BASE_URL; // trocar por env de ambiente
 
 export const getFilms = async () => {
   return axios.request({ baseURL, url: 'films' });
